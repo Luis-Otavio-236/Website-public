@@ -5,6 +5,16 @@ body {
   color: white;
 }
 
+/* Fix: add padding-top to content container to avoid overlap with fixed header */
+#content-area {
+  padding-top: 80px; /* same as header height + some margin */
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 1.6;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -45,15 +55,6 @@ header {
 
 .header-button:hover {
   background-color: #ddd;
-}
-
-.content {
-  padding-top: 80px;
-  max-width: 900px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  line-height: 1.6;
 }
 
 h2 {
