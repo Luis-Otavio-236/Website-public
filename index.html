@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<header>
+<header id="page-header">
   <div class="header-title">FanStation</div>
   <div class="buttons-container">
     <button class="header-button" data-target="home">Home</button>
@@ -118,6 +118,16 @@
       
       document.getElementById(target).style.display = 'block';
     });
+  });
+
+  // Script para esconder o header ao rolar para baixo e mostrar ao chegar no topo
+  const header = document.getElementById('page-header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY === 0) {
+      header.style.display = 'flex'; // mostra quando no topo
+    } else {
+      header.style.display = 'none'; // esconde ao rolar para baixo
+    }
   });
 </script>
 
