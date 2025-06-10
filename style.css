@@ -63,14 +63,36 @@ h2 {
   text-align: center;
 }
 
+/* Style for game items with alternating sides */
 .game-item {
   display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  gap: 20px;
 }
+
+/* Enlarged images */
 .game-item img {
-  width: 50px;
+  width: 150px;
   height: auto;
-  margin-right: 10px;
   border: 1px solid #fff;
+  flex-shrink: 0; /* prevent shrinking */
 }
+
+/* Left side images: normal flex row */
+.game-item.left {
+  flex-direction: row;
+}
+
+/* Right side images: reverse row to flip image and text */
+.game-item.right {
+  flex-direction: row-reverse;
+}
+
+/* Keep game info text in a constrained width for readability */
+.game-info {
+  max-width: calc(100% - 150px - 20px);
+  padding: 10px;
+}
+
+/* Optional: Style for 'Learn More' button and details if needed */
